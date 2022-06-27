@@ -17,7 +17,7 @@
 
 &mt {
   //  flavor = "tap-preferred";
-   // tapping_term_ms = <200>;
+   // tapping_term_ms = <250>;
 };
 
 / { 
@@ -66,9 +66,9 @@
                 
         default_layer {
             bindings = <
-            &kp Q        &kp W       &kp F       &kp P      &trans                 &trans &kp L       &kp U       &kp Y       &kp J 
-            &mt LCTRL A  &mt LGUI R  &mt LALT S  &kp T      &lt NAV G              &kp M  &mt RALT N  &mt RGUI E  &mt RALT I  &kp O
-            &kp Z        &kp X       &kp C       &kp D      &trans                 &trans &kp H       &kp K       &kp B       &kp V
+            &kp Q        &kp W       &kp F       &kp P      &trans                 &trans   &kp L      &kp U       &kp Y       &kp J 
+            &mt LCTRL A  &mt LGUI R  &mt LALT S  &lt NAV T  & G                    &kp M    &kp N      &mt RALT E  &mt RGUI I  &mt RCTRL O
+            &kp Z        &kp X       &kp C       &kp D      &trans                 &trans   &kp H      &kp K       &kp B       &kp V
                                                  &mo LOWER  &mt LSHFT SPC          &kp RET  &mo RAISE
             >;
         };
