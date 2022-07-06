@@ -29,6 +29,7 @@
         sst: shift-space-tap {
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_SPACE_TAP";
+            #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
