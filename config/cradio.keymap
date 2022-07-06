@@ -22,10 +22,19 @@
   global-quick-tap;
 };
 
+
 / { 
 
-    combos {
-        compatible = "zmk,combos";
+    behaviors {
+        sst: shift-space-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_SPACE_TAP";
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
@@ -36,7 +45,7 @@
             &kp Q        &kp W       &kp F       &kp P      &trans                 &trans   &kp L      &kp U       &kp Y       &kp J 
             &mt LCTRL A  &mt LGUI R  &mt LALT S  &lt NAV T  &kp G                  &kp M    &kp N      &mt RALT E  &mt RGUI I  &mt RCTRL O
             &kp Z        &kp X       &kp C       &kp D      &trans                 &trans   &kp H      &kp K       &kp B       &kp V
-                                                 &mo LOWER  &mt LSHFT SPC          &kp RET  &mo RAISE
+                                                 &mo LOWER  &sst LSHFT SPC         &kp RET  &mo RAISE
             >;
         };
 
