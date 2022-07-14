@@ -26,9 +26,9 @@
 / { 
 
     behaviors {
-        sst: shift-space-tap {
+        st: shift-tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_SPACE_TAP";
+            label = "SHIFT_TAP";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
@@ -43,10 +43,10 @@
                 
         default_layer {
             bindings = <
-            &kp Q        &kp W       &kp F       &kp P      &trans                 &trans   &kp L      &kp U       &kp Y       &kp J 
-            &mt LCTRL A  &mt LGUI R  &mt LALT S  &lt NAV T  &kp G                  &kp M    &kp N      &mt RALT E  &mt RGUI I  &mt RCTRL O
-            &kp Z        &kp X       &kp C       &kp D      &trans                 &trans   &kp H      &kp K       &kp B       &kp V
-                                                 &mo LOWER  &sst LSHFT SPC         &kp RET  &mo RAISE
+            &kp Q        &kp W       &kp F       &kp P      &trans                 &trans         &kp L      &kp U       &kp Y       &kp J 
+            &mt LCTRL A  &mt LGUI R  &mt LALT S  &lt NAV T  &kp G                  &kp M          &kp N      &mt RALT E  &mt RGUI I  &mt RCTRL O
+            &kp Z        &kp X       &kp C       &kp D      &trans                 &trans         &kp H      &kp K       &kp B       &kp V
+                                                 &mo LOWER  &st LSHFT SPC          &st RSHFT RET  &mo RAISE
             >;
         };
 
@@ -55,7 +55,7 @@
             &kp EXCL  &kp AT     &kp HASH  &kp DLLR  &trans                &trans    &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR 
             &kp ESC   &kp QMARK  &kp LT    &kp GT    &kp PRCNT             &kp CRRT  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC
             &kp CAPS  &kp TILDE  &trans    &trans    &trans                &trans    &kp COLON  &trans    &kp PIPE  &kp DQT
-                                           &trans    &trans                &kp BSPC  &kp DEL
+                                           &trans    &trans                &kp BSPC  &trans
             >;
         };    
 
@@ -64,7 +64,7 @@
             &kp N1    &kp N2     &kp N3     &kp N4    &trans            &trans  &kp N7     &kp N8     &kp N9    &kp N0
             &kp ESC   &kp SLASH  &kp COMMA  &kp DOT   &kp N5            &kp N6  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
             &kp CAPS  &kp GRAVE  &trans     &trans    &trans            &trans  &kp SEMI   &trans     &kp BSLH  &kp SQT
-                                            &mo META  &kp SPC           &trans  &trans
+                                            &mo META  &kp DEL           &trans  &trans
             >;
         };
 
