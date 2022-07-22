@@ -13,6 +13,8 @@
 #define RAISE 2
 #define NAV 3
 #define META 4
+#define GAMING 5
+#define GAMING2 6
 
 
 &mt {
@@ -79,11 +81,29 @@
 
         meta_layer {
             bindings = <
-            &trans      &trans     &trans      &trans  &trans             &trans  &trans  &trans  &trans  &trans
+            &trans      &trans     &trans      &trans  &trans             &trans  &trans  &trans  &trans  &tog GAMING
             &trans      &trans     &trans      &trans  &trans             &trans  &trans  &trans  &trans  &trans 
-            &bt BT_CLR  &bt BT_NXT &bt BT_PRV  &trans  &trans             &trans  &trans  &trans  &trans &trans   
+            &bt BT_CLR  &bt BT_NXT &bt BT_PRV  &trans  &trans             &trans  &trans  &trans  &trans  &trans   
                                                &trans  &trans             &trans  &trans 
             >;
         };    
+
+        gaming_layer {
+            bindings = <
+            &kp TAB    &kp Q       &kp W       &kp E      &kp R              &no   &no  &no  &no  &no
+            &kp LSHFT  &kp A       &kp S       &kp D      &kp F              &no   &no  &no  &no  &no
+            &kp LCTRL  &kp Z       &kp X       &kp C      &kp V              &no   &no  &no  &no  &no
+                                               &kp SPC    &mo GAME2          &no   &mo RAISE
+            >;
+        };
+
+        gaming2_layer {
+            bindings = <
+            &kp ESC    &kp N1      &kp N2      &kp N3     &kp N4             &no   &no  &no  &no  &no
+            &kp LSHFT  &kp A       &kp S       &kp D      &kp F              &no   &no  &no  &no  &no
+            &kp LCTRL  &kp Z       &kp X       &kp C      &kp V              &no   &no  &no  &no  &no
+                                               &kp SPC    &no                &no   &mo RAISE
+            >;
+        };
     };
 };
