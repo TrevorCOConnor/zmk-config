@@ -1,4 +1,4 @@
-/*
+\*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -90,19 +90,19 @@
 
         gaming_layer {
             bindings = <
-            &kp TAB    &kp Q       &kp W       &kp E      &kp R              &no   &no  &no  &no  &no
-            &kp LSHFT  &kp A       &kp S       &kp D      &kp F              &no   &no  &no  &no  &no
-            &kp LCTRL  &kp Z       &kp X       &kp C      &kp V              &no   &no  &no  &no  &no
-                                               &kp SPC    &mo GAME2          &no   &mo RAISE
+            &kp TAB    &kp Q       &kp W       &kp E      &kp R              &none   &none       &none  &none  &none
+            &kp LSHFT  &kp A       &kp S       &kp D      &kp F              &none   &none       &none  &none  &none
+            &kp LCTRL  &kp Z       &kp X       &kp C      &kp V              &none   &none       &none  &none  &none
+                                               &kp SPC    &mo GAME2          &none   &mo RAISE
             >;
         };
 
         gaming2_layer {
             bindings = <
-            &kp ESC    &kp N1      &kp N2      &kp N3     &kp N4             &no   &no  &no  &no  &no
-            &kp LSHFT  &kp A       &kp S       &kp D      &kp F              &no   &no  &no  &no  &no
-            &kp LCTRL  &kp Z       &kp X       &kp C      &kp V              &no   &no  &no  &no  &no
-                                               &kp SPC    &no                &no   &mo RAISE
+            &kp ESC    &kp N1      &kp N2      &kp N3     &kp N4             &none   &none  &none  &none  &none
+            &kp LSHFT  &kp A       &kp S       &kp D      &kp F              &none   &none  &none  &none  &none
+            &kp LCTRL  &kp Z       &kp X       &kp C      &kp V              &none   &none  &none  &none  &none
+                                               &kp SPC    &none              &none   &mo RAISE
             >;
         };
     };
