@@ -9,11 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define LOWER 1
-#define RAISE 2
-#define NAV 3
-#define META 4
-#define GAMING 5
+#define GAMING 1
+#define LOWER 2
+#define RAISE 3
+#define NAV 4
+#define META 5
 #define GAMING_UP 6
 
 
@@ -52,6 +52,16 @@
             >;
         };
 
+        gaming_layer {
+            bindings = <
+            &kp TAB    &kp Q       &kp W       &kp E      &kp R              &none   &none       &none  &none  &none
+            &kp LSHFT  &kp A       &kp S       &kp D      &kp F              &none   &none       &none  &none  &none
+            &kp LCTRL  &kp Z       &kp X       &kp C      &kp V              &none   &none       &none  &none  &none
+                                               &kp SPC    &mo GAMING_UP      &none   &mo RAISE
+            >;
+        };
+
+
         lower_layer {
             bindings = <
             &kp EXCL  &kp AT     &kp HASH  &kp DLLR  &trans                &trans    &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR 
@@ -87,15 +97,6 @@
                                                &trans  &trans             &trans  &trans 
             >;
         };    
-
-        gaming_layer {
-            bindings = <
-            &kp TAB    &kp Q       &kp W       &kp E      &kp R              &none   &none       &none  &none  &none
-            &kp LSHFT  &kp A       &kp S       &kp D      &kp F              &none   &none       &none  &none  &none
-            &kp LCTRL  &kp Z       &kp X       &kp C      &kp V              &none   &none       &none  &none  &none
-                                               &kp SPC    &mo GAMING_UP      &none   &mo RAISE
-            >;
-        };
 
         gaming2_layer {
             bindings = <
