@@ -54,10 +54,10 @@
 
         gaming_layer {
             bindings = <
-            &kp TAB    &kp Q       &kp W       &kp E      &kp R              &none   &none       &none  &none  &none
-            &kp LSHFT  &kp A       &kp S       &kp D      &kp F              &none   &none       &none  &none  &none
-            &kp LCTRL  &kp Z       &kp X       &kp C      &kp V              &none   &none       &none  &none  &none
-                                               &kp SPC    &mo GAMING_UP      &none   &mo RAISE
+            &kp TAB    &kp Q       &kp W       &kp E         &kp R              &none   &none       &none  &none  &none
+            &kp LSHFT  &kp A       &kp S       &kp D         &kp F              &none   &none       &none  &none  &none
+            &kp LALT   &kp Z       &kp X       &kp C         &kp V              &none   &none       &none  &none  &none
+                                               &mo GAMING_UP &kp SPC         &none   &mo RAISE
             >;
         };
 
@@ -100,10 +100,10 @@
 
         gaming2_layer {
             bindings = <
-            &kp ESC    &kp N1      &kp N2      &kp N3     &kp N4             &none   &none  &none  &none  &none
-            &kp LSHFT  &kp A       &kp S       &kp D      &kp F              &none   &none  &none  &none  &none
-            &kp LCTRL  &kp Z       &kp X       &kp C      &kp V              &none   &none  &none  &none  &none
-                                               &kp SPC    &none              &none   &mo RAISE
+            &kp N1     &kp N2      &kp N3      &kp N4  &kp N5             &none   &none  &none  &none  &none
+            &kp ESC    &kp A       &kp S       &kp D   &kp F              &none   &none  &none  &none  &none
+            &kp LCTRL  &kp Z       &kp X       &kp C   &kp V              &none   &none  &none  &none  &none
+                                               &none   &kp space          &none   &mo RAISE
             >;
         };
     };
