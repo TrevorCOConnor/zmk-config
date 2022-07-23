@@ -103,7 +103,7 @@
             &kp N1     &kp N2      &kp N3      &kp N4  &kp N5             &none   &none  &none  &none  &none
             &kp ESC    &kp A       &kp S       &kp D   &kp F              &none   &none  &none  &none  &none
             &kp LCTRL  &kp Z       &kp X       &kp C   &kp V              &none   &none  &none  &none  &none
-                                               &none   &kp space          &none   &mo RAISE
+                                               &none   &kp SPC            &none   &mo RAISE
             >;
         };
     };
