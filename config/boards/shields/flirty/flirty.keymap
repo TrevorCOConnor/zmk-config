@@ -1,0 +1,88 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define DEFAULT 0
+#define LOWER 1
+#define RAISE 2
+#define NAV 3
+#define META 4
+#define ST(keycode) &as LSHFT keycode
+
+
+&mt {
+  flavor = "balanced";
+  tapping_term_ms = <200>;
+  quick-tap-ms = <175>;
+  global-quick-tap;
+};
+
+
+/ { 
+    behaviors {
+        st: shift-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+                
+        default_layer {
+            bindings = <
+            &kp Q        &kp W           &kp F       &kp P                                            &kp L      &kp U       &kp Y          &kp J 
+            &mt LCTRL A  &mt LGUI R      &mt LALT S  &lt NAV T  &kp G                  &kp M          &kp N      &mt RALT E  &mt RGUI I     &mt RCTRL O
+            &mt LSHFT Z  &mt LS(LALT) X  &kp C       &kp D                                            &kp H      &kp K       &mt RS(RALT) B &mt RSHFT V
+                                                 &mo LOWER  &st LSHFT SPC          &st RSHFT RET  &mo RAISE
+            >;
+        };
+
+        lower_layer {
+            bindings = <
+            &kp EXCL  &kp AT     &kp HASH  &kp DLLR                                  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR 
+            &kp ESC   &kp QMARK  &kp LT    &kp GT    &kp PRCNT             &kp CRRT  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC
+            &kp CAPS  &kp TILDE  &trans    &trans                                    &kp COLON  &trans    &kp PIPE  &kp DQT
+                                           &trans    &trans                &none  &kp BSPC
+            >;
+        };    
+
+        raise_layer {
+            bindings = <
+            &kp N1    &kp N2     &kp N3     &kp N4                              &kp N7     &kp N8     &kp N9    &kp N0
+            &kp ESC   &kp SLASH  &kp COMMA  &kp DOT   &kp N5            &kp N6  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
+            &kp CAPS  &kp GRAVE  &trans     &trans                              &kp SEMI   &trans     &kp BSLH  &kp SQT
+                                            &mo META  &kp DEL           &trans  &trans
+            >;
+        };
+
+        navigation_layer {
+            bindings = <
+            &trans  &trans  &trans  &trans                              &kp HOME  &kp PG_UP  &trans    &trans
+            &trans  &trans  &trans  &trans  &trans            &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans
+            &trans  &trans  &trans  &trans                              &kp END   &kp PG_DN  &kp TAB  &trans
+                                    &trans  &trans            &trans    &trans
+            >;
+        };
+
+        meta_layer {
+            bindings = <
+            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                             &trans  &trans  &trans  &trans
+            &trans        &trans        &trans        &trans        &bt BT_SEL 4       &trans  &trans  &trans  &trans  &trans 
+            &bt BT_CLR    &bt BT_NXT    &bt BT_PRV    &trans                                   &trans  &trans  &trans &trans   
+                                                      &trans        &trans             &trans  &trans 
+            >;
+        };    
+    };
+};
