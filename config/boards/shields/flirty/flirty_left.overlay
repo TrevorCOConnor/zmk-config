@@ -1,0 +1,8 @@
+ 7 lines (6 sloc) 107 Bytes
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "flirty.dtsi"
