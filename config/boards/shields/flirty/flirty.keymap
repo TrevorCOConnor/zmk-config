@@ -12,7 +12,8 @@
 #define LOWER 1
 #define RAISE 2
 #define NAV 3
-#define META 4
+#define FUNC 4
+#define META 5
 #define ST(keycode) &as LSHFT keycode
 
 
@@ -42,7 +43,7 @@
                 
         default_layer {
             bindings = <
-            &kp Q        &kp W           &kp F       &kp P                                            &kp L      &kp U       &kp Y          &kp J 
+            &lt FUNC Q   &kp W           &kp F       &kp P                                            &kp L      &kp U       &kp Y          &lt FUNC J 
             &mt LCTRL A  &mt LGUI R      &mt LALT S  &lt NAV T  &kp G                  &kp M          &kp N      &mt RALT E  &mt RGUI I     &mt RCTRL O
             &mt LSHFT Z  &mt LS(LALT) X  &kp C       &kp D                                            &kp H      &kp K       &mt RS(RALT) B &mt RSHFT V
                                                  &mo LOWER  &st LSHFT SPC          &st RSHFT RET  &mo RAISE
@@ -73,6 +74,15 @@
             &trans  &trans  &trans  &trans  &trans            &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans
             &trans  &trans  &trans  &trans                              &kp END   &kp PG_DN  &kp TAB  &trans
                                     &trans  &trans            &trans    &trans
+            >;
+        };
+
+        function_layer {
+            bindings = <
+            &kp F1  &kp F2  &kp F3  &kp F4                            &kp F7  &kp F8  &kp F9  &kp F10
+            &trans  &trans  &trans  &trans  &kp F5            &kp F6  &trans  &trans  &trans  &kp F11
+            &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &kp F12
+                                    &trans  &trans            &trans  &trans
             >;
         };
 
